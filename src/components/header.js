@@ -1,42 +1,54 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import logo from '../images/lauren-labs-logo.jpg';
 
-const Header = ({ siteTitle }) => (
+const siteLinks = [
+  { href: '/design', title: 'Design' },
+  { href: '/development', title: 'Development' },
+  { href: '/photography', title: 'Photography' },
+  { href: '/writing', title: 'Writing' },
+];
+
+const Header = () => (
   <header
     style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      background: `black`,
+      height: '100px'
     }}
+    className="mb-2"
   >
     <div
       style={{
         margin: `0 auto`,
         maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        height: '100%'
       }}
+    className="flex flex-col md:flex-row justify-between"
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
+      <Link
+        to="/"
+        style={{
+          height: 0
+        }} 
+        className="inline-block"
+      >
+        <img 
           style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+            height: '100px',
+          }} 
+          className="mb-0"
+          src={logo} alt="Logo for Lauren Labs and link to home page" />
+      </Link>
+      <div className="flex flex-col md:flex-row items-center">
+        {siteLinks.map(link => (
+          <a key={link.title} href={link.href}>
+            {link.title}
+          </a>
+        ))}
+      </div>
     </div>
   </header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header
