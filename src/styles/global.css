@@ -14,7 +14,7 @@ html {
 }
 
 /* unvisited link */
-header a:link {
+header a:link, footer {
     color: white;
     padding-left: 10px;
     font-family: 'Roboto Slab', serif;
