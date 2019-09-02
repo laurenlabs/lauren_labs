@@ -6,7 +6,7 @@ const PortfolioPiece = ({title, description, children}) => (
         <div className="w-full md:w-1/3 flex justify-center">
             {children}
         </div>
-        <div className="w-full md:w-2/3 md:px-6">
+        <div className="w-full md:w-2/3 md:px-6 flex flex-col justify-center">
             <h3 className="mb-2">{title}</h3>
             <p>{description}</p>
         </div>
