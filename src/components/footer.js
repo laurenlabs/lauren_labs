@@ -5,23 +5,23 @@ const Header = () => (
         background: `black`,
         color: 'white'
       }}
-      className="p-3"
+        className="p-2"
       >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        height: '100%'
-      }}
-    className="flex flex-col md:flex-row justify-between"
-    >
-        <div>
+        <div
+        style={{
+            margin: `0 auto`,
+            maxWidth: 960,
+            height: '100%'
+        }}
+        className="flex flex-col md:flex-row justify-between"
+        >
+            <div>
             &copy; {new Date().getFullYear()} Lauren Labs
+            </div>
+            <div>
+            Icons Here
+            </div>
         </div>
-        <div>
-          Icons Here
-        </div>
-      </div>
     </footer>
 )
 

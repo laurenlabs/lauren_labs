@@ -16,7 +16,7 @@ const Header = () => (
       background: `black`,
       height: '100px'
     }}
-    className="mb-2"
+    className="px-2 mb-2"
   >
     <div
       style={{
@@ -31,7 +31,6 @@ const Header = () => (
         style={{
           height: 0
         }} 
-        className="inline-block"
       >
         <img 
           style={{

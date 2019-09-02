@@ -13,19 +13,46 @@ html {
   font-family: 'Roboto', sans-serif;
 }
 
-header a {
+/* unvisited link */
+header a:link {
     color: white;
     padding-left: 10px;
     font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;
+    font-size: .8rem;
 }
 
+/* visited link */
+header a:visited {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+/* mouse over link */
+header a:hover {
+    color: #999999;
+}
+
+/* selected link */
+header a:active {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+
 h1 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 2.25rem;
     font-weight: 300;
 }
 
 h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+h3 {
     font-family: 'Raleway', sans-serif;
     font-size: 1.5rem;
     font-weight: 300;
@@ -37,5 +64,26 @@ p {
 
 footer {
     font-family: 'Roboto Slab', serif;
+}
+
+.portfolio-piece img {
+    height: 150px;
+    width: auto;
+}
+
+img:hover {
+    transform: scale(1.1);
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+}
+
+header img:hover {
+    transform: scale(1);
+}
+
+.page-links a {
+    font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;
+    font-size: .8rem;
 
 }
